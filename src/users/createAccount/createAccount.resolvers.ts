@@ -1,5 +1,5 @@
 import { Resolvers } from "./../../types.d";
-import bcrypt from "bcrypt";
+import * as bcrypt from "bcrypt";
 import client from "../../client";
 
 const resolvers: Resolvers = {
