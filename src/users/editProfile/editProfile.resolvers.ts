@@ -1,9 +1,10 @@
+import { Resolvers } from "./../../types.d";
 import { createWriteStream } from "fs";
 import * as bcrypt from "bcrypt";
 import client from "../../client";
 import { protectedResolver } from "../users.utils";
 
-export default {
+const resolvers: Resolvers = {
   Mutation: {
     editProfile: protectedResolver(
       async (
@@ -62,3 +63,5 @@ export default {
     ),
   },
 };
+
+export default resolvers;
